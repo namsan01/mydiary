@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom";
 import BotBar from "../styles/footerstyle";
 
-function Footer() {
-  return <BotBar>사공은진</BotBar>;
-}
+const Footer = (props) => {
+  return (
+    <BotBar>
+      <Link to="/home">{props.children}</Link>
+    </BotBar>
+  );
+};
 
 export default Footer;
